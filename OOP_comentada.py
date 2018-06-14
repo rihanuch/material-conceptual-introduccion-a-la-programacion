@@ -1,4 +1,4 @@
-'''
+"""
 Programacion orientada a objetos
 
 La programacion orientada a objetos, u OOP (por su sigla en ingles
@@ -9,7 +9,7 @@ Hay que pensar en la OOP como si se estuviese construyendo un "algo" desde
 el punto de vista de programacion. En otras palabras, los objetos son una
 abstraccion que permite construir un "algo" "tangible", el cual tendra
 propiedades y posiblemente funciones.
-'''
+"""
 
 
 # Primero repasaremos como se define un objeto
@@ -17,21 +17,20 @@ propiedades y posiblemente funciones.
 
 # Para definir un objeto se debe poner "class NombreDelObjeto:"
 class NombreDelObjeto:
-    '''
+    """
     Nuestro objeto hipotetico va a tener el nombre que se le asigne
     despues del espacio de "class"
-    '''
-
-    # Ahora le asignamos un nombre, nuestro objeto tiene una identidad
+    """
+    # Ahora que le asignamos un nombre, nuestro objeto tiene una identidad
     # con la cual podemos identificarlo
 
-    # Cabe recordar que ademas es importante siempre recordar que se debe
-    # definir la funcion "__init__" de la forma siguiente:
+    # Cabe recordar que siempre  se debe definir la funcion "__init__" de la
+    # siguiente forma:
     # (vamos a abreviar "elemento_fundamental_de_nuestro_objeto" como "efo")
     # "def __init__(self, efo_1, efo_2, efo_3, ...):"
 
     def __init__(self, efo_1, efo_2):
-        # Cabe notar que "self" lo unico que hace es referenciarse a uno mismo,
+        # "self" lo unico que hace es referenciarse a uno mismo,
         # en otras palabras, es como decir "yo voy a tener estas cosas".
 
         # Es importante destacar que "self", en realidad puede ser cualquier
@@ -39,9 +38,10 @@ class NombreDelObjeto:
         # (mi_mismo) de la misma manera en el objeto:
         # La moraleja es, hay que ser consistente con los nombres
 
-        # El metodo __init__ es para "inicializar" la clase, es decir,
+        # El metodo __init__ es para "inicializar" (porque viene del ingles
+        # initilize) la clase, es decir,
         # cada vez que queramos crear un nuevo objeto de este tipo, se va a
-        # llamar esta funcion, la cual va a definir los atriutos intrinsecos
+        # llamar esta funcion, la cual va a definir los atributos intrinsecos
         # de ese objeto nuevo en particular
 
         # Por el momento vamos definir nuestros elementos fundamentales
@@ -63,14 +63,13 @@ class NombreDelObjeto:
 
     # Esto podemos definirlo de la siguiente forma
     def haz_algo(self, argumento_1):
-        '''
+        """
         Notar que cada funcion que sea parte de nuestro objeto NombreDelObjeto
         tendra que tener el argumento "self" para poder hacer referencia a
         a si mismo. Es decir, si no se incluye el "self", se estaria
         haciendo alusion a una variable que puede estar en cualquier parte,
         lo cual no es deseable en este tipo de modelacion.
-        '''
-
+        """
         # Es importante notar que una funcion de un objeto tambien puede
         # recibir parametros externos al objeto mismo, lo cual permite
         # dar flexibilidad en lo que puede hacer.
@@ -98,3 +97,19 @@ class NombreDelObjeto:
 
 # Ahora que hemos sentado las bases de la idea detras de un objeto, hagamos
 # algo mas concreto, definamos nuestro "creativo" lenguaje de programacion
+
+class Cobra:
+    """
+    Nuestro super nuevo y creativo lenguaje de programacion
+    """
+
+    def __init__(self, quien_soy):
+        self.quien_soy = quien_soy
+
+    def espejito_espejito_a_quien_imito(self):
+        return 'Tu imitas a ' + self.quien_soy
+
+    def cambia_mi_esencia_de_programacion(self, redefinicion):
+        print('Voy a pasar de ser' + self.quien_soy + ' a ' + redefinicion)
+        self.quien_soy = redefinicion
+        print('Ahora soy ' + self.quien_soy)
