@@ -28,10 +28,11 @@ class NombreDelObjeto:
     # Cabe recordar que ademas es importante siempre recordar que se debe
     # definir la funcion "__init__" de la forma siguiente:
     # (vamos a abreviar "elemento_fundamental_de_nuestro_objeto" como "efo")
-    # "def __init__(mi_mismo, efo_1, efo_2, efo_3, ...):"
+    # "def __init__(self, efo_1, efo_2, efo_3, ...):"
 
-    def __init__(mi_mismo, efo_1, efo_2):
-        # Cabe notar que "mi_mismo" es lo mismo que decir el conocido "self".
+    def __init__(self, efo_1, efo_2):
+        # Cabe notar que "self" lo unico que hace es referenciarse a uno mismo,
+        # en otras palabras, es como decir "yo voy a tener estas cosas".
 
         # Es importante destacar que "self", en realidad puede ser cualquier
         # nombre, siempre y cuando nos referenciemos a nosotros mismos
@@ -44,13 +45,13 @@ class NombreDelObjeto:
         # de ese objeto nuevo en particular
 
         # Por el momento vamos definir nuestros elementos fundamentales
-        mi_mismo.efo_1 = efo_1
-        mi_mismo.efo_2 = efo_2
+        self.efo_1 = efo_1
+        self.efo_2 = efo_2
 
         # Lo anterior es lo mismo que decir
-        # self.efo_1 = efo_1
+        # mi_mismo.efo_1 = efo_1
         # y
-        # self.efo_2 = efo_2
+        # mi_mismo.efo_2 = efo_2
 
         # Lo que hemos hecho anteriormente es decirle a Python :snake:
         # que cada vez que creemos un nuevo objeto del tipo NombreDelObjeto
