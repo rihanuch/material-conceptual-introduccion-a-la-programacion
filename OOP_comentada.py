@@ -98,7 +98,7 @@ class NombreDelObjeto:
 # Ahora que hemos sentado las bases de la idea detras de un objeto, hagamos
 # algo mas concreto, definamos nuestro "creativo" lenguaje de programacion
 
-class Cobra:
+class LenguajeDeProgramacion:
     """
     Nuestro super nuevo y creativo lenguaje de programacion
     """
@@ -110,6 +110,69 @@ class Cobra:
         return 'Tu imitas a ' + self.quien_soy
 
     def cambia_mi_esencia_de_programacion(self, redefinicion):
-        print('Voy a pasar de ser' + self.quien_soy + ' a ' + redefinicion)
+        """
+        Esta funcion va a cambiar la variable de instancia de objeto. Una
+        instancia es diferente al objeto en si, ya que la instancia es un caso
+        especifico del objeto, por ejemplo una instancia de auto es un auto con
+        patente XXXX-00. Todos son objetos del tipo Auto, pero cada auto es
+        unico en su instancia, teniendo una patente que lo identifica
+        """
+        # Aqui redefiniremos una variable de instancia mostrando el antes
+        # y el despues
+        print('Voy a pasar de ser ' + self.quien_soy + ' a ' + redefinicion)
+
+        # Ahora se redefine la variable
         self.quien_soy = redefinicion
+
+        # Si imprimimos nuestra variable de instancia, podemos ver que
+        # ahora es diferente, pero SOLO para la instancia de la clase que se
+        # modifico
         print('Ahora soy ' + self.quien_soy)
+
+
+# Concretemos nuestro ejemplo instanciando dos objetos del mismo tipo
+python = LenguajeDeProgramacion('Python')
+wannabe_python = LenguajeDeProgramacion('Python')
+
+
+# Si imprimimos la direccion de memoria de cada INSTANCIA, nos estariamos
+# dando cuenta de python y wannabe_python son instancias DIFERENTES a pesar
+# de que tienen variables con valores iguales.
+# (La direccion de memoria es lo que sigue de 'object at')
+
+print('python se ubica en: ' + python.__repr__())
+# >> python se ubica en: <__main__.LenguajeDeProgramacion object at 0x1048060b8>
+
+print('wannabe_python se ubica en: ' + wannabe_python.__repr__())
+# >> wannabe_python se ubica en: <__main__.LenguajeDeProgramacion object at 0x104806128>
+
+
+# Como podemos ver, el numero del final es diferente entre los dos (va a variar
+# el numero exacto dependiendo de la ejecucion del programa, pero siempre
+# van a ser numeros diferentes), pero por motivos didacticos, comprobemoslo
+# imrpimiendo la igualdad
+
+print(python.__repr__() == wannabe_python.__repr__())
+# >> False
+
+# La leccion de esto es que cda vez que queramos crear una instancia nueva
+# de nuestro objeto, este sera diferente a los otros a pesar de ser igual
+# en cada parametro posible
+
+
+# Ejecutemos nuestro cambio de variable para que wannabe_python se distinga.
+# Como cada objeto es dueño se su propio metodo, cuando queremos llamar una
+# funcion de nuestra calse, no podemos llamar a la funcion de LA CLASE, sino
+# que se debe llamar a la funcion de la instancia, ya que la instancia
+# es la que es dueña de su funcion
+
+wannabe_python.cambia_mi_esencia_de_programacion('Cobra')
+# >> Voy a pasar de ser Python a Cobra
+# >> Ahora soy Cobra
+
+# Comprobemos qu nuestra variable quien_soy realmente cambio para
+# wannabe_python, y que de ahora en adelante sera la definamos en su
+# funcion cambia_mi_esencia_de_programacion
+
+print(wannabe_python.quien_soy)
+# >> Cobra
