@@ -139,6 +139,8 @@ wannabe_python = LenguajeDeProgramacion('Python')
 # dando cuenta de python y wannabe_python son instancias DIFERENTES a pesar
 # de que tienen variables con valores iguales.
 # (La direccion de memoria es lo que sigue de 'object at')
+# (La direccion de memoria es en que lugar del PC se almacena la instancia
+# de cada variable que creamos)
 
 print('python se ubica en: ' + python.__repr__())
 # >> python se ubica en: <__main__.LenguajeDeProgramacion object at 0x1048060b8>
