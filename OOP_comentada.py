@@ -157,6 +157,10 @@ print('wannabe_python se ubica en: ' + wannabe_python.__repr__())
 print(python.__repr__() == wannabe_python.__repr__())
 # >> False
 
+# esto, a pesar de que son iguales en su variable 'quien_soy'
+print(python.quien_soy == wannabe_python.quien_soy)
+# >> True
+
 # La leccion de esto es que cda vez que queramos crear una instancia nueva
 # de nuestro objeto, este sera diferente a los otros a pesar de ser igual
 # en cada parametro posible
