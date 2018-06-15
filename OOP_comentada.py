@@ -171,8 +171,10 @@ wannabe_python.cambia_mi_esencia_de_programacion('Cobra')
 # >> Ahora soy Cobra
 
 # Comprobemos qu nuestra variable quien_soy realmente cambio para
-# wannabe_python, y que de ahora en adelante sera la definamos en su
-# funcion cambia_mi_esencia_de_programacion
+# wannabe_python mientras que para python no, sumado a que de ahora en adelante
+# sera la definamos en su funcion cambia_mi_esencia_de_programacion.
 
 print(wannabe_python.quien_soy)
 # >> Cobra
+print(python.quien_soy)
+# >> Python
