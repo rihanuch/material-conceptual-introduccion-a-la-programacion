@@ -4,7 +4,6 @@
 class Nodo:
     """
     Lugar en que se almacena la informacion que queremos
-
     """
 
     def __init__(self, posicion, elemento):
@@ -33,7 +32,6 @@ class Nodo:
         del indice indicado
 
         param: posicion (int) -> numero de posicion
-
         """
 
         if self.posicion == posicion:
@@ -49,7 +47,6 @@ class Nodo:
 
         param: posicion (int) -> posicion a reemplazar
         param: nuevo elemento -> cualquier cosa que se quiera
-
         """
 
         if self.posicion == posicion:
@@ -64,7 +61,6 @@ class Nodo:
 class MiLista:
     """
     Una lista tal como las comunes y corrientes
-
     """
 
     def __init__(self):
@@ -76,7 +72,6 @@ class MiLista:
         Es el equivalente a hacer un append de una lista normal
 
         param: cualquier tipo de cosa que se quiera agregar a la lista
-
         """
 
         if self.nodo is None:
@@ -94,7 +89,6 @@ class MiLista:
         Es el equivalente a hacer un lista[pos]
 
         param: posicion (int) -> numero de posicion en la lista
-
         """
 
         return self.nodo.data_en_pos(posicion)
@@ -111,7 +105,6 @@ class MiLista:
 
         param: posicion (int) -> posicion a reemplazar
         param: nuevo elemento -> cualquier cosa que se quiera
-
         """
 
         self.nodo.reemplazar(posicion, nuevo_elemento)
@@ -149,14 +142,12 @@ class MiListaReal(MiLista):
     """
     Lista que utilizara los metodos magicos de Python para hacerla mas
     practica, que hereda de MiLista para simplificar las operaciones
-
     """
 
     def __init__(self):
         """
         Se inicializa como cualquier Objeto, pero se tiene que hacer
         el paso a continuacion porque hereda de otro objeto
-
         """
 
         # El metodo super().__init__() es utilizado para crear la instancia
