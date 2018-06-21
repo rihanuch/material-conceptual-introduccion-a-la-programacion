@@ -43,21 +43,22 @@ class MiListaReal(MiLista):
         self.agregar(elemento)
 
 
-# Probemos nuestra nueva y mejorada lista
-# Primero hay que instanciarla
-LISTA_REAL = MiListaReal()
+if __name__ == '__main__':
+    # Probemos nuestra nueva y mejorada lista
+    # Primero hay que instanciarla
+    LISTA_REAL = MiListaReal()
 
-# Haremos la misma prueba que con MiLista
-for num in range(10):
-    LISTA_REAL.append(num)
-    print('En la posicion:', num, 'esta:', LISTA_REAL[num])
+    # Haremos la misma prueba que con MiLista
+    for num in range(10):
+        LISTA_REAL.append(num)
+        print('En la posicion:', num, 'esta:', LISTA_REAL[num])
 
-print('-' * 25)
-print('El largo de la lista es:', len(LISTA_REAL))
-print('-' * 25)
+    print('-' * 25)
+    print('El largo de la lista es:', len(LISTA_REAL))
+    print('-' * 25)
 
-for num in range(0, 10, 2):
-    # el tercer argumento de range nos permite ir de 2 en dos
-    # esto es, 0, 2, 4, 6, 8
-    LISTA_REAL[num] = num * 2
-    print('Ahora en la posicion:', num, 'esta:', LISTA_REAL[num])
+    for num in range(0, 10, 2):
+        # el tercer argumento de range nos permite ir de 2 en dos
+        # esto es, 0, 2, 4, 6, 8
+        LISTA_REAL[num] = num * 2
+        print('Ahora en la posicion:', num, 'esta:', LISTA_REAL[num])

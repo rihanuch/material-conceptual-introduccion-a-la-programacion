@@ -110,21 +110,22 @@ class MiLista:
         self.nodo.reemplazar(posicion, nuevo_elemento)
 
 
-# Ahora probemos nuestra lista
-# Instanciamos la lista que creamos
-MI_LISTA = MiLista()
+if __name__ == '__main__':
+    # Ahora probemos nuestra lista
+    # Instanciamos la lista que creamos
+    MI_LISTA = MiLista()
 
-# Probameros agregando 10 elementos
-for num in range(10):
-    MI_LISTA.agregar(num)
-    print('En la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
+    # Probameros agregando 10 elementos
+    for num in range(10):
+        MI_LISTA.agregar(num)
+        print('En la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
 
-print('-' * 25)
-print('El largo de la lista es:', MI_LISTA.largo())
-print('-' * 25)
+    print('-' * 25)
+    print('El largo de la lista es:', MI_LISTA.largo())
+    print('-' * 25)
 
-for num in range(0, 10, 2):
-    # el tercer argumento de range nos permite ir de 2 en dos
-    # esto es, 0, 2, 4, 6, 8
-    MI_LISTA.reemplazar(num, num * 2)
-    print('Ahora en la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
+    for num in range(0, 10, 2):
+        # el tercer argumento de range nos permite ir de 2 en dos
+        # esto es, 0, 2, 4, 6, 8
+        MI_LISTA.reemplazar(num, num * 2)
+        print('Ahora en la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
