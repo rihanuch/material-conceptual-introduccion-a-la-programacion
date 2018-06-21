@@ -127,6 +127,8 @@ for num in range(10):
     print('En la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
 
 print('-' * 25)
+print('El largo de la lista es:', MI_LISTA.largo())
+print('-' * 25)
 
 for num in range(0, 10, 2):
     # el tercer argumento de range nos permite ir de 2 en dos
