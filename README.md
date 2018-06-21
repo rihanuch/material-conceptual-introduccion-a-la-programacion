@@ -1,2 +1,4 @@
-# material-conceptual-introduccion-a-la-programacion
-Material para poder entender mejor los conceptos de introducción a la programación en Python 3
+# Material conceptual para introducción a la programación
+
+## Contenidos
+* Programación orientada a **objetos**: OOP
