@@ -155,10 +155,12 @@ class MiListaReal(MiLista):
     def __init__(self):
         """
         Se inicializa como cualquier Objeto, pero se tiene que hacer
-        el paso a continuacion porque hereda
+        el paso a continuacion porque hereda de otro objeto
 
         """
 
+        # El metodo super().__init__() es utilizado para crear la instancia
+        # del objeto del cual hereda
         super(MiListaReal, self).__init__()
 
     def __getitem__(self, posicion):
