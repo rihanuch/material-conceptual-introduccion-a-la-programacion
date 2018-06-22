@@ -1,9 +1,9 @@
 # Material conceptual para introducción a la programación
 
 ## Contenidos
-* Programación orientada a **objetos**: OOP
+* _Programación orientada a objetos_: OOP y paradigma de programación funcional
 
 ### Ejercicios
 Tipo de ejercicio: Contenido que abarca
 
-* Creación de listas ligadas: Recursión y OOP
+* _Listas ligadas_: Recursión y OOP
