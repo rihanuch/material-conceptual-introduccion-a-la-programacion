@@ -3,9 +3,9 @@
 ## Contenidos
 Nombre de contenido: _Descripción_
 
-* Programación orientada a objetos: _OOP y paradigma de programación funcional :gem:_
+* Programación orientada a objetos: _OOP y paradigma de programación funcional_ :gem:
 
 ### Ejercicios
 Tipo de ejercicio: _Contenido que abarca_
 
-* Listas ligadas: _Recursión y OOP :cyclone:_
+* Listas ligadas: _Recursión y OOP_ :cyclone:
