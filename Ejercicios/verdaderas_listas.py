@@ -27,6 +27,12 @@ class MiListaReal(MiLista):
         # del objeto del cual hereda
         super(MiListaReal, self).__init__()
 
+    def append(self, elemento):
+        """
+        Es el equivalente al append de una lista normal
+        """
+        self.agregar(elemento)
+
     def __getitem__(self, posicion):
         return self.data_en_pos(posicion)
 
@@ -36,11 +42,8 @@ class MiListaReal(MiLista):
     def __len__(self):
         return self.cantidad
 
-    def append(self, elemento):
-        """
-        Es el equivalente al append de una lista normal
-        """
-        self.agregar(elemento)
+    def __repr__(self):
+        return self.dame_todo()
 
 
 if __name__ == '__main__':
@@ -49,7 +52,7 @@ if __name__ == '__main__':
     LISTA_REAL = MiListaReal()
 
     # Haremos la misma prueba que con MiLista
-    for num in range(10):
+    for num in range(20):
         LISTA_REAL.append(num)
         print('En la posicion:', num, 'esta:', LISTA_REAL[num])
 
@@ -62,3 +65,7 @@ if __name__ == '__main__':
         # esto es, 0, 2, 4, 6, 8
         LISTA_REAL[num] = num * 2
         print('Ahora en la posicion:', num, 'esta:', LISTA_REAL[num])
+
+    # probamos que se pueda imprimir bien
+    print('-' * 25)
+    print('Tambien se puede imprimir nuestra lista:', LISTA_REAL)

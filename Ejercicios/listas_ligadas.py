@@ -57,6 +57,28 @@ class Nodo:
             # caso recursivo
             self.hijo.reemplazar(posicion, nuevo_elemento)
 
+    def dame_todo(self, vuelta):
+        """
+        Es el equivalente a un print de una lista normal
+
+        param: vuelta (string) -> va agregando recursivamete los elementos
+                                  de cada nodo
+        """
+
+        # nuestro caso base en el que se inicia el llamado recursivo
+        if vuelta == "":
+            vuelta += "[" + str(self.elemento) + ", "
+            return self.hijo.dame_todo(vuelta)
+
+        # verifico si pued seguir haciendo la recursion
+        elif self.hijo is None:
+            vuelta += str(self.elemento) + "]"
+            return vuelta
+
+        # si estoy en un caso intermedio solo agrego el elemento que contengo
+        vuelta += str(self.elemento) + ", "
+        return self.hijo.dame_todo(vuelta)
+
 
 class MiLista:
     """
@@ -109,6 +131,14 @@ class MiLista:
 
         self.nodo.reemplazar(posicion, nuevo_elemento)
 
+    def dame_todo(self):
+        """
+        Es el equivalente a un print() de una lista normal
+        """
+
+        # se le tiene que dar un string vacio para comenzar
+        return self.nodo.dame_todo("")
+
 
 if __name__ == '__main__':
     # Ahora probemos nuestra lista
@@ -129,3 +159,7 @@ if __name__ == '__main__':
         # esto es, 0, 2, 4, 6, 8
         MI_LISTA.reemplazar(num, num * 2)
         print('Ahora en la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
+
+    # probamos que se pueda imprimir bien
+    print('-' * 25)
+    print('Tambien se puede imprimir nuestra lista:', MI_LISTA.dame_todo())
