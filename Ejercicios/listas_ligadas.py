@@ -163,3 +163,5 @@ if __name__ == '__main__':
     # probamos que se pueda imprimir bien
     print('-' * 25)
     print('Tambien se puede imprimir nuestra lista:', MI_LISTA.dame_todo())
+
+    print(MI_LISTA.dame_todo())
