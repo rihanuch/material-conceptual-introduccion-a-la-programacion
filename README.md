@@ -1,11 +1,11 @@
 # Material conceptual para introducción a la programación
 
 ## Contenidos
-_Nombre de contenido_: _Descripción_
+Nombre de contenido: _Descripción_
 
-* _Programación orientada a objetos_: _OOP y paradigma de programación funcional :gem:_
+* Programación orientada a objetos: _OOP y paradigma de programación funcional :gem:_
 
 ### Ejercicios
-_Tipo de ejercicio_: _Contenido que abarca_
+Tipo de ejercicio: _Contenido que abarca_
 
-* _Listas ligadas_: _Recursión y OOP :cyclone:_
+* Listas ligadas: _Recursión y OOP :cyclone:_
