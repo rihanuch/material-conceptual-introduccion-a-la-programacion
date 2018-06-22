@@ -4,7 +4,6 @@
 class Nodo:
     """
     Lugar en que se almacena la informacion que queremos
-
     """
 
     def __init__(self, posicion, elemento):
@@ -33,7 +32,6 @@ class Nodo:
         del indice indicado
 
         param: posicion (int) -> numero de posicion
-
         """
 
         if self.posicion == posicion:
@@ -49,7 +47,6 @@ class Nodo:
 
         param: posicion (int) -> posicion a reemplazar
         param: nuevo elemento -> cualquier cosa que se quiera
-
         """
 
         if self.posicion == posicion:
@@ -64,7 +61,6 @@ class Nodo:
 class MiLista:
     """
     Una lista tal como las comunes y corrientes
-
     """
 
     def __init__(self):
@@ -76,7 +72,6 @@ class MiLista:
         Es el equivalente a hacer un append de una lista normal
 
         param: cualquier tipo de cosa que se quiera agregar a la lista
-
         """
 
         if self.nodo is None:
@@ -94,7 +89,6 @@ class MiLista:
         Es el equivalente a hacer un lista[pos]
 
         param: posicion (int) -> numero de posicion en la lista
-
         """
 
         return self.nodo.data_en_pos(posicion)
@@ -111,27 +105,27 @@ class MiLista:
 
         param: posicion (int) -> posicion a reemplazar
         param: nuevo elemento -> cualquier cosa que se quiera
-
         """
 
         self.nodo.reemplazar(posicion, nuevo_elemento)
 
 
-# Ahora probemos nuestra lista
-# Instanciamos la lista que creamos
-MI_LISTA = MiLista()
+if __name__ == '__main__':
+    # Ahora probemos nuestra lista
+    # Instanciamos la lista que creamos
+    MI_LISTA = MiLista()
 
-# Probameros agregando 10 elementos
-for num in range(10):
-    MI_LISTA.agregar(num)
-    print('En la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
+    # Probameros agregando 10 elementos
+    for num in range(10):
+        MI_LISTA.agregar(num)
+        print('En la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
 
-print('-' * 25)
-print('El largo de la lista es:', MI_LISTA.largo())
-print('-' * 25)
+    print('-' * 25)
+    print('El largo de la lista es:', MI_LISTA.largo())
+    print('-' * 25)
 
-for num in range(0, 10, 2):
-    # el tercer argumento de range nos permite ir de 2 en dos
-    # esto es, 0, 2, 4, 6, 8
-    MI_LISTA.reemplazar(num, num * 2)
-    print('Ahora en la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
+    for num in range(0, 10, 2):
+        # el tercer argumento de range nos permite ir de 2 en dos
+        # esto es, 0, 2, 4, 6, 8
+        MI_LISTA.reemplazar(num, num * 2)
+        print('Ahora en la posicion:', num, 'esta:', MI_LISTA.data_en_pos(num))
